@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TaskManagement.Buisness.ViewModels.TaskModel>
+<link rel="stylesheet" href="~/css/site.css" />
+<script src="~/js/TaskManagement.js"></script>
+<script src="~/js/site.js"></script>
+
+<div class="row">
+
+</div>
+<div class="container">
+    <div style=" padding: 60px 0px 0px 0px">
+        <div class="row form-group align-items-center">
+            <div class="col-sm-1 mt-1">
+                <label class="form-control-label">Status </label>
+            </div>
+            <div class="col-sm-4">
+                @Html.DropDownList("status", new SelectList(((dynamic)ViewBag.TaskStatus) ?? new List<dynamic>(), "Value", "Text"), new { @class = "custom-select" })
+            </div>
+            <div class="col-sm-2 ms-auto">
+                <a class="btn btn-success text-white btn-sm" onclick="taskManagement.searchTasks()">Search</a>
+            </div>
+            <div class="col-sm-2">
+                <a onclick="taskManagement.addTask('@Url.Action("Create", "TaskManagement", null, Context.Request.Scheme)', 'Create')"
+                   class="btn btn-success text-white btn-sm float-end"> New </a>
+            </div>
+        </div>
+    </div>
+    <div>
+       
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Due Date</th>
+                    <th>Status</th>
+                    <th style="width:110px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @Html.Partial("_TaskTablePartial", Model)
+            </tbody>
+        </table>
+    </div>
+</div>

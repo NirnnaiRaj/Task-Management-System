@@ -1,0 +1,18 @@
+﻿@model IEnumerable<TaskManagement.Buisness.ViewModels.TaskModel>
+
+                    @foreach (var task in Model)
+                    {
+                        <tr>
+                            <td>@task.Title</td>
+                            <td>@task.Description</td>
+                            <td>@task.DueDate.ToString("dd-MM-yyyy")</td>
+                            <td>@task.TaskStatus</td>
+                            <td style="width:50px;">
+                                <a href="javascript:void(0);" onclick="taskManagement.editTask('@Url.Action("Edit", "TaskManagement", new { id = task.Id })', 'Edit')">
+                                    Edit
+                                    <i class="fas fa-edit"></i>
+                                </a> |
+                                <a href="javascript:void(0);" onclick="taskManagement.deleteTask('@Url.Action("Delete", "TaskManagement", new { id = task.Id })')">Delete</a>
+                            </td>
+                        </tr>
+                    }
