@@ -19,8 +19,9 @@ namespace Task_Management_System.Controllers
         {
             this.taskManagementBuisness = taskManagementBuisness;
         }
-        public async Task<ActionResult> Index(TaskManagementFilters taskManagementFilters)
+        public async Task<ActionResult> Index()
         {
+            TaskManagementFilters taskManagementFilters = new TaskManagementFilters();
             var result = await taskManagementBuisness.GetAllTaskManagement(taskManagementFilters);
 
             // Get enum values

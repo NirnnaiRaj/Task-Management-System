@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task Management System", "Task Management System\Task Management System.csproj", "{51DADF5F-F97B-4A12-842D-8B163411A194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task Management System", "Task Management System\Task Management System.csproj", "{51DADF5F-F97B-4A12-842D-8B163411A194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement.Buisness", "TaskManagementBuisness\TaskManagement.Buisness.csproj", "{E020C1EE-986A-49A4-BE2C-E975D6D7A085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskManagement.Buisness", "TaskManagementBuisness\TaskManagement.Buisness.csproj", "{E020C1EE-986A-49A4-BE2C-E975D6D7A085}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database Script and Readme", "Database Script and Readme", "{02D95168-B0CD-4662-9DC5-27A675D2AA86}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\TaskManagement Script.sql = ..\..\..\Desktop\TaskManagement Script.sql
+		..\..\..\Desktop\TaskManagement_ReadME.txt = ..\..\..\Desktop\TaskManagement_ReadME.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
