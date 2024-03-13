@@ -1,8 +1,8 @@
 ﻿$(document).ready(function () {
-    // Set a timeout to hide the error message after 5 seconds
+    // Set a timeout to hide the error message after 3 seconds
     setTimeout(function () {
         $('#errorMessage').fadeOut('slow');
-    }, 3000); // 5000 milliseconds = 5 seconds
+    }, 3000);
 });
 
 ShowSnackBarSuccessMessage = (message) => {

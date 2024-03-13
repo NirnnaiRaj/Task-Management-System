@@ -11,6 +11,7 @@ using TaskManagement.Buisness.ViewModels;
 
 namespace Task_Management_System.Controllers
 {
+    [AuthorizationFilterAttribute]
     public class TaskManagementController : Controller
     {
         private readonly ITaskManagementBuisness taskManagementBuisness;

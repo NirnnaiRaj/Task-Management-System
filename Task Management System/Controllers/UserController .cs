@@ -73,7 +73,6 @@ namespace Task_Management_System.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
-            ViewBag.Logout = "Logged out..";
             return View("Login");
         }
     }
